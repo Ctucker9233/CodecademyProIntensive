@@ -384,13 +384,13 @@ footer a:hover{
 	font-size: 2.2em;
     }
 	h2{
-	font-size: 1.45em;
+	font-size: 1.75em;
 	}
 	h3{
-	font-size: 1.15em;
+	font-size: 1.25em;
 	}
 	h4{
-	font-size: 1em;
+	font-size: 1.15em;
 	padding: 2px 0px;
 	}
     footer {
@@ -403,20 +403,28 @@ footer a:hover{
     grid-column: auto;
   }
   
+  footer a {
+  padding: 0.5rem;
+  font-size: 1em;
+}
+  
   nav {
   padding: .5rem .5rem .5rem .5rem;
   }
   
   nav a{
-	padding: 2px;
-	font-size: 1em;
+	padding: 0.5rem;
+	font-size: 1.15em;
   }
   
   .product-list {
     grid-template-columns: 1fr;
+	grid-gap: 0.1rem;
+	margin: 0.1rem;
+	width: 100%;
   }
   .product-list-section {
-  padding: 1rem 4rem 1rem 4rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
   .cart {
     padding: .8rem .9rem;
