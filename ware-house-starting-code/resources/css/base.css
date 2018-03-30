@@ -162,7 +162,7 @@ ul.breadcrumb {
 }
 ul.breadcrumb li {
     display: inline;
-    font-size: 16px;
+    font-size: 1em;
     align-items: left;
 }
 ul.breadcrumb li+li:before {
@@ -201,6 +201,7 @@ ul.breadcrumb li a:hover{
                        'nav'
                        'main'
                        'footer';
+  max-width: 100%;
 }
 
 
@@ -214,6 +215,7 @@ header {
   padding: .75rem 5rem;
   font-size: inherit;
   background-color: #93B8AD;
+  max-width: 100%;
 }
 
 .search-bar {
@@ -294,13 +296,20 @@ nav a:visted {
   .cart {
     justify-self: auto;
   }
+  ul.breadcrumb {
+    padding: 1rem 2rem;
+    list-style: none;
+    align-items: left;
+	font-size: 1.35rem;
+}
   nav {
-  padding: 1rem 5rem 1rem 5rem;
+  padding: 1rem 4.5rem 1rem 4.5rem;
   }
   nav a{
-	padding: 5px;
+	padding: 0.5rem;
 	border-radius: 5px;
-	font-size: 1.5em;
+	font-size: 1.25em;
+	text-align: center;
   }
 }
 
@@ -308,6 +317,28 @@ nav a:visted {
   nav {
     grid-template-columns: 1fr;
   }
+
+  ul.breadcrumb {
+    padding: 1.75rem 3rem;
+    list-style: none;
+    align-items: left;
+}
+
+  ul.breadcrumb {
+	font-size: 1.15rem;
+}
+  
+  header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  padding: .75rem 2rem;
+}
+
+.product-list-section {
+  padding: 1rem 4rem 1rem 4rem;
+}
 }
 
 /* Main Section */
@@ -370,13 +401,76 @@ footer a:hover{
     grid-column: 1 / span 3;
   }
     nav a{
-	padding: 3px;
-	font-size: 1.15em;
+	padding: 0.5rem;
+	font-size: 1.35em;
+	line-height: 1.1;
   }
   
   nav {
   padding: 1rem 1rem 1rem 1rem;
   }
+  
+  ul.breadcrumb li+li:before {
+    padding: 1rem;
+    color: hsla(0, 0%, 29%, 1);
+    content: "/\00a0";
+}
+
+ul.breadcrumb li {
+    display: block;
+    font-size: 1.5em;
+	padding: 0.5rem;
+    align-items: left;
+}
+
+.product-item h3 {
+font-size: 1.5em;
+}
+
+.product-list-section {
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+}
+@media only screen and (max-width: 565px) {
+	h1{
+	font-size: 2.2em;
+    }
+	h2{
+	font-size: 1.75em;
+	}
+	h3{
+	font-size: 1.35em;
+	}
+	h4{
+	font-size: 1.25em;
+	padding: 0.5rem 0rem;
+	}
+ footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    }
+
+  footer img {
+    grid-column: auto;
+  }
+  
+  footer a {
+  padding: 0.5rem;
+  font-size: 1.25em;
+}
+
+  ul.breadcrumb {
+    padding: 1.75rem 2rem;
+    list-style: none;
+    align-items: left;
+}
+
+  ul.breadcrumb li+li:before {
+    padding: 0.5rem;
+    color: hsla(0, 0%, 29%, 1);
+    content: "/\00a0";
 }
 
 @media screen and (max-width: 475px) {
@@ -416,6 +510,12 @@ footer a:hover{
 	padding: 0.5rem;
 	font-size: 1.15em;
   }
+  
+    ul.breadcrumb {
+    padding: 1.25rem 1rem;
+    list-style: none;
+    align-items: left;
+}
   
   .product-list {
     grid-template-columns: 1fr;
